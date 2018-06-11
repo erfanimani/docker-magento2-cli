@@ -34,3 +34,5 @@ RUN docker-php-ext-install \
   soap \
   xsl \
   zip
+
+COPY default-php.ini /usr/local/etc/php/conf.d/
