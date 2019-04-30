@@ -1,4 +1,4 @@
-FROM php:7.1
+FROM php:7.2
 
 MAINTAINER Erfan Imani <contact@erfanimani.com>
 
@@ -27,7 +27,6 @@ RUN docker-php-ext-install \
   gd \
   intl \
   mbstring \
-  mcrypt \
   opcache \
   pdo_mysql \
   soap \
