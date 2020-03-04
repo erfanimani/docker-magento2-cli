@@ -10,6 +10,7 @@ RUN curl -sS https://getcomposer.org/installer | \
 RUN apt-get update && apt-get install -y \
   cron \
   git \
+  rsync \
   libfreetype6-dev \
   libicu-dev \
   libjpeg62-turbo-dev \
