@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
   libjpeg62-turbo-dev \
   libmcrypt-dev \
   libxslt1-dev \
-  mysql-client \
+  default-mysql-client \
   vim \
   zip
 
@@ -31,6 +31,7 @@ RUN docker-php-ext-install \
   pdo_mysql \
   soap \
   xsl \
-  zip
+  zip \
+  sockets
 
 COPY default-php.ini /usr/local/etc/php/conf.d/
