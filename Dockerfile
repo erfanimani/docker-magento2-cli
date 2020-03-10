@@ -1,4 +1,4 @@
-FROM php:7.2
+FROM php:7.3
 
 MAINTAINER Erfan Imani <contact@erfanimani.com>
 
@@ -18,7 +18,9 @@ RUN apt-get update && apt-get install -y \
   libxslt1-dev \
   default-mysql-client \
   vim \
+  libzip-dev \
   zip
+
 
 RUN docker-php-ext-configure \
   gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/
