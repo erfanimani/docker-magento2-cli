@@ -4,6 +4,8 @@ A simple Docker image for running Magento 2 CI/CD scripts
 
 ## Changelog
 
+7.4-1: Increased PHP version to 7.4. Pegged Composer version to 1.
+
 7.3-1: Increased PHP version to 7.3.
 
 7.2-3: Release 7.2.-3: Installed rsync, required for deployphp/deployer.

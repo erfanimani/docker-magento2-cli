@@ -1,11 +1,14 @@
-FROM php:7.3
+FROM php:7.4
 
 MAINTAINER Erfan Imani <contact@erfanimani.com>
 
 WORKDIR /app
 
-RUN curl -sS https://getcomposer.org/installer | \
-  php -- --install-dir=/usr/local/bin --filename=composer
+RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"; \
+    php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"; \
+    php composer-setup.php --install-dir=/usr/local/bin --filename=composer; \
+    php -r "unlink('composer-setup.php');" ; \
+    composer self-update --1
 
 RUN apt-get update && apt-get install -y \
   cron \
@@ -17,19 +20,17 @@ RUN apt-get update && apt-get install -y \
   libmcrypt-dev \
   libxslt1-dev \
   default-mysql-client \
-  vim \
   libzip-dev \
   zip
 
 
 RUN docker-php-ext-configure \
-  gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/
+  gd --with-freetype --with-jpeg
 
 RUN docker-php-ext-install \
   bcmath \
   gd \
   intl \
-  mbstring \
   opcache \
   pdo_mysql \
   soap \
