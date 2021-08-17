@@ -4,6 +4,8 @@ A simple Docker image for running Magento 2 CI/CD scripts
 
 ## Changelog
 
+7.4-3: Updated Composer version to 2.1.5, to work with the new Github token format.
+
 7.4-2: Updated Composer version to 2.
 
 7.4-1: Increased PHP version to 7.4. Pegged Composer version to 1.
