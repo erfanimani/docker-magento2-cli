@@ -1,8 +1,17 @@
 # Docker Magento2 CLI
 
-A simple Docker image for running Magento 2 CI/CD scripts
+A simple Docker image for running Magento 2 CLI commands on CI/CD only — don't use for production.
 
+## Build instructions
+
+    docker build . -t erfanimani/magento2-cli:{version} -t erfanimani/magento2-cli:latest
+
+    docker push erfanimani/magento2-cli:{version}
+    docker push erfanimani/magento2-cli:latest
+    
 ## Changelog
+
+7.4-4: Updated PHP to 7.4.29.
 
 7.4-3: Updated Composer version to 2.1.5, to work with the new Github token format.
 
