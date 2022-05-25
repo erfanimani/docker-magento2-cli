@@ -8,7 +8,12 @@ A simple Docker image for running Magento 2 CLI commands on CI/CD only — don't
 
     docker push erfanimani/magento2-cli:{version}
     docker push erfanimani/magento2-cli:latest
-    
+
+## Todo
+
+* Switch base image to Alpine
+* Add PHP 8.1 for Magento 2.4.4
+
 ## Changelog
 
 7.4-4: Updated PHP to 7.4.29.
