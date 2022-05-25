@@ -2,6 +2,8 @@
 
 A simple Docker image for running Magento 2 CLI commands on CI/CD only — don't use for production.
 
+Link to Docker Hub: [hub.docker.com/r/erfanimani/magento2-cli](https://hub.docker.com/r/erfanimani/magento2-cli).
+
 ## Build instructions
 
     docker build . -t erfanimani/magento2-cli:{version} -t erfanimani/magento2-cli:latest
