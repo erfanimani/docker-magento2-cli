@@ -13,10 +13,12 @@ Link to Docker Hub: [hub.docker.com/r/erfanimani/magento2-cli](https://hub.docke
 
 ## Todo
 
-* Switch base image to Alpine
-* Add PHP 8.1 for Magento 2.4.4
+- [ ] Switch base image to Alpine for faster builds
+- [x] Add PHP 8.1 support for Magento 2.4.4
 
 ## Changelog
+
+8.1-1: Updated PHP to 8.1.9 and Composer to 2.2.17.
 
 7.4-4: Updated PHP to 7.4.29.
 
