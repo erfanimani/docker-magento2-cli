@@ -11,6 +11,12 @@ Link to Docker Hub: [hub.docker.com/r/erfanimani/magento2-cli](https://hub.docke
     docker push erfanimani/magento2-cli:{version}
     docker push erfanimani/magento2-cli:latest
 
+### Apple Silicon
+
+If you're building the image on ARM architecture, run the following instead to ensure it can run elsewhere (i.e. Github Actions):
+
+    docker buildx build --platform=linux/amd64 . -t {tag}
+
 ## Todo
 
 - [ ] Switch base image to Alpine for faster builds
