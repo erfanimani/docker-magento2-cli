@@ -17,11 +17,6 @@ If you're building the image on ARM architecture, run the following instead to e
 
     docker buildx build --platform=linux/amd64 . -t {tag}
 
-## Todo
-
-- [ ] Switch base image to Alpine for faster builds
-- [x] Add PHP 8.1 support for Magento 2.4.4
-
 ## Changelog
 
 8.2-1: Updated PHP to 8.2.12 and Composer to 2.2.22.
