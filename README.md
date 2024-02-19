@@ -21,6 +21,8 @@ If you're building the image on ARM architecture, run the following instead to e
 
 8.2-1: Updated PHP to 8.2.12 and Composer to 2.2.22.
 
+8.1-2: Updated PHP to 8.1.27 and Composer to 2.2.23.
+
 8.1-1: Updated PHP to 8.1.9 and Composer to 2.2.17.
 
 7.4-4: Updated PHP to 7.4.29.
