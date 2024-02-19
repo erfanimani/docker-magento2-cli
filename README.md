@@ -18,6 +18,8 @@ Link to Docker Hub: [hub.docker.com/r/erfanimani/magento2-cli](https://hub.docke
 
 ## Changelog
 
+8.1-2: Updated PHP to 8.1.27 and Composer to 2.2.23.
+
 8.1-1: Updated PHP to 8.1.9 and Composer to 2.2.17.
 
 7.4-4: Updated PHP to 7.4.29.
