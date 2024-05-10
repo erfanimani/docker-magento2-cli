@@ -19,6 +19,8 @@ If you're building the image on ARM architecture, run the following instead to e
 
 ## Changelog
 
+8.3-1: Updated PHP to 8.3.6 and Composer to 2.7.6.
+
 8.2-1: Updated PHP to 8.2.12 and Composer to 2.2.22.
 
 8.1-2: Updated PHP to 8.1.27 and Composer to 2.2.23.

@@ -1,4 +1,4 @@
-FROM php:8.2
+FROM php:8.3
 
 MAINTAINER Erfan Imani <contact@erfanimani.com>
 
@@ -32,13 +32,10 @@ RUN docker-php-ext-install \
   zip \
   sockets
 
-# Locking composer to 2.2 until Magento 2.4.7 comes out
-# @see https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html
 
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"; \
-    php -r "if (hash_file('sha384', 'composer-setup.php') === 'e21205b207c3ff031906575712edab6f13eb0b361f2085f1f1237b7126d785e826a450292b6cfd1d64d92e6563bbde02') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"; \
+    php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"; \
     php composer-setup.php --install-dir=/usr/local/bin --filename=composer; \
-    php -r "unlink('composer-setup.php');"; \
-    composer selfupdate 2.2.22
+    php -r "unlink('composer-setup.php');"
 
 COPY default-php.ini /usr/local/etc/php/conf.d/
